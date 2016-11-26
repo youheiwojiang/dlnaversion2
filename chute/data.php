@@ -22,5 +22,5 @@ if ($_FILES["file"]["error"] > 0)
       echo "Stored in: " . "/music/" . $_FILES["file"]["name"];
       }
   }
-  header("Location: ./boot.php")
+  header("Location: ./index.php")
 ?>
