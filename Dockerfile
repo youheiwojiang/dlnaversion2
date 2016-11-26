@@ -13,6 +13,10 @@ RUN rm /etc/php5/apache2/php.ini
 
 COPY chute/php.ini /etc/php5/apache2/php.ini
 
+COPY chute/index.php /var/www/html/index.php
+
+COPY chute/data.php /var/www/html/data.php
+
 EXPOSE 80/tcp
 
 CMD ["bash", "usr/local/bin/run.sh" ]
