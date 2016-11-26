@@ -9,6 +9,10 @@ RUN rm /usr/local/bin/run.sh
 
 COPY chute/run.sh /usr/local/bin/run.sh
 
+RUN rm /etc/php5/apache2/php.ini
+
+COPY chute/php.ini /etc/php5/apache2/php.ini
+
 EXPOSE 80/tcp
 
 CMD ["bash", "usr/local/bin/run.sh" ]
