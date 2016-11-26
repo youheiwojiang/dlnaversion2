@@ -17,8 +17,6 @@ COPY chute/index.php /var/www/html/index.php
 
 COPY chute/data.php /var/www/html/data.php
 
-RUN chmod 777 /music
-
 EXPOSE 80/tcp
 
 CMD ["bash", "usr/local/bin/run.sh" ]
