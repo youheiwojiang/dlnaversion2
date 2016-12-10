@@ -3,7 +3,9 @@ FROM bjwbjw123456/dlna:latest
 RUN apt-get install -y \
 	apache2\
 	libapache2-mod-php5\
-	php5
+	php5\
+	sqlite\
+	sqlite3
 
 RUN rm /usr/local/bin/run.sh
 
