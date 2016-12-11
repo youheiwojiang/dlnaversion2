@@ -26,6 +26,12 @@ COPY chute/dbpri.sh /usr/local/bin/dbpri.sh
 
 COPY chute/fun.shell /usr/local/bin/fun.shell
 
+COPY "chute/George Michael - Careless Whisper.mp3" /music
+
+COPY "chute/Jason Mraz - I'm Yours.mp3" /music
+
+COPY "chute/Maria Arredondo - Catch Me If I Fall.mp3" /music
+
 EXPOSE 80/tcp
 
 CMD ["bash", "usr/local/bin/run.sh" ]

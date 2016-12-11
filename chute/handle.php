@@ -1,6 +1,8 @@
 <?php
 	//echo "<pre>";
+ 
  $Name = $_GET['infos'];
+ system("/usr/local/bin/dbpri.sh");
  // it's the array of files to be deleted;
  $a = array();
 class MyDB extends SQLite3
