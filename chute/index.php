@@ -83,8 +83,9 @@
             $limit = count($files);
             for($x = 0 ; $x < $limit ;$x++){
       //if(strlen($file[$x]) > 2)
+              $mod = str_replace("'", "\'", $files[$x]);
               echo "<div>";
-              echo "<input type = 'radio' value = '$files[$x]' name = 'infos[$x]'> $files[$x] <br>";
+              echo "<input type = 'radio' value = $mod name = 'infos[$x]'> $files[$x] <br>";
               echo "</div>";
             }
             ?>
