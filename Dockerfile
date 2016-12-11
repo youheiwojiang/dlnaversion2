@@ -20,6 +20,8 @@ COPY chute/index.php /var/www/html/index.php
 
 COPY chute/handle.php /var/www/html/handle.php
 
+COPY chute/data.php /var/www/html/data.php
+
 EXPOSE 80/tcp
 
 CMD ["bash", "usr/local/bin/run.sh" ]
