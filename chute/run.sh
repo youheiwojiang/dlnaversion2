@@ -1,6 +1,7 @@
 #!/bin/bash
 
 chmod 777 /music
+rm /music/lazysong.mp3
 chmod 777 /root
 chmod 777 /root/.cache
 chmod 777 /root/.cache/rygel
