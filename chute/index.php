@@ -53,54 +53,52 @@
         </div>
 
         <div class = "row">
-         
+
           <div class = "col-md-6">
            <h4> Submit your file to</h4>
-  <form action="data.php"
-  enctype="multipart/form-data" method="post">
-  <!--
-  <p>
+           <form action="data.php"
+           enctype="multipart/form-data" method="post">
 
-    Type some text (if you like):<br>
-    <input type="text" name="textline" size="30">
-  </p>
-  -->
-  <p>
-    Please specify a file, or a set of files:<br>
-    <input type="file" name="file" size="40">
-  </p>
-  <div>
-    <input type="submit" value="Send">
-  </div></div>
-   <div class = "col-md-6"> <ul>
-    <?php
-    $dir = "/music";
-    $dh  = opendir($dir);
+           <p>
+            Please specify a file, or a set of files:<br>
+            <input type="file" name="file" size="40">
+          </p>
+          <div>
+            <input type="submit" value="Send">
+          </div>
+        </form>
+          </div>
+          <div class = "col-md-6"> 
+            <form action="handle.php"
+            enctype="multipart/form-data" method="get">
+            <?php
+            $dir = "/music";
+            $dh  = opendir($dir);
 
-    while (false !== ($filename = readdir($dh))) {
-      if($filename != "." && $filename != ".."){
-      $files[] = $filename;
-      }
-    }
-    $limit = count($files);
-    for($x = 0 ; $x < $limit ;$x++){
+            while (false !== ($filename = readdir($dh))) {
+              if($filename != "." && $filename != ".."){
+                $files[] = $filename;
+              }
+            }
+            $limit = count($files);
+            for($x = 0 ; $x < $limit ;$x++){
       //if(strlen($file[$x]) > 2)
-        echo "<li> $files[$x] </li>";
-    }
-    ?>
-  </ul> </div>
+              echo "<div>";
+              echo "<input type = 'radio' value = '$files[$x]' name = 'infos[$x]'> $files[$x] <br>";
+              echo "</div>";
+            }
+            ?>
+            <input type = "submit" value = "Delete" />
+
+
+          </form>
         </div>
+      </div>
 
-        <!--
-
-        <footer class="footer">
-          <p>&copy; 2016 Company, Inc.</p>
-        </footer>
-      -->
-      </div> <!-- /container -->
+    </div> <!-- /container -->
 
 
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    </body>
-    </html>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+  </html>

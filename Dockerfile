@@ -5,7 +5,8 @@ RUN apt-get install -y \
 	libapache2-mod-php5\
 	php5\
 	sqlite\
-	sqlite3
+	sqlite3\
+    php5-sqlite
 
 RUN rm /usr/local/bin/run.sh
 
@@ -17,7 +18,7 @@ COPY chute/php.ini /etc/php5/apache2/php.ini
 
 COPY chute/index.php /var/www/html/index.php
 
-COPY chute/data.php /var/www/html/data.php
+COPY chute/handle.php /var/www/html/handle.php
 
 EXPOSE 80/tcp
 
