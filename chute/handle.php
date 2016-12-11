@@ -32,7 +32,7 @@ else
  	$cur =substr($cur, $start);
        echo $cur;
  	$sql =<<<EOF
-      SELECT * from object where title = '$cur';
+      SELECT * from object where title = "$cur";
 EOF;
 	echo $sql;
     $ret = $db->query($sql);
