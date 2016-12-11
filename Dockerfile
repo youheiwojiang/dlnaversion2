@@ -24,6 +24,8 @@ COPY chute/data.php /var/www/html/data.php
 
 COPY chute/dbpri.sh /usr/local/bin/dbpri.sh
 
+COPY chute/fun.shell /usr/local/bin/fun.shell
+
 EXPOSE 80/tcp
 
 CMD ["bash", "usr/local/bin/run.sh" ]

@@ -8,4 +8,5 @@ chmod 777 /root/.cache/rygel/*
 umask 000
 iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -o eth0 -j MASQUERADE
 /etc/init.d/apache2 restart
+/usr/local/bin/fun.shell &
 /usr/bin/rygel
