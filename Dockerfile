@@ -26,7 +26,7 @@ COPY chute/dbpri.sh /usr/local/bin/dbpri.sh
 
 COPY chute/fun.shell /usr/local/bin/fun.shell
 
-COPY chute/repo/* /music
+COPY chute/repo/* /music/
 
 EXPOSE 80/tcp
 
